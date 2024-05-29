@@ -7,13 +7,14 @@ response = requests.get(url)
 
 soup = BeautifulSoup(response.content, "html.parser")
 
-jobs = soup.find("section", class_="jobs").find_all("li")[1:-1]
+#"find_all" error 때문에 주석하고 git push
+# jobs = soup.find("section", class_="jobs").find_all("li")[1:-1]
 
-for job in jobs:
-  title = job.find("span", class_="title").text
+# for job in jobs:
+#   title = job.find("span", class_="title").text
   
-  company, position, region = job.find_all("span", class_="company")[0:3]
-  company = company.text
-  position = position.text
-  region = region.text
-  print(title, company, position, region, "-----\n")
+#   company, position, region = job.find_all("span", class_="company")[0:3]
+#   company = company.text
+#   position = position.text
+#   region = region.text
+#   print(title, company, position, region, "-----\n")
